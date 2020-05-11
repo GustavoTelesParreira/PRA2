@@ -1,0 +1,98 @@
+package com.example.agendiario;
+
+
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+
+
+
+ Anotação '@Entity'
+ @Entity(tableName = "poems")
+
+
+public class Poems {
+
+    
+        @PrimaryKey - marca um campo como campo de chave primária.
+        @ForeignKey - define a restrição de chave estrangeira.
+        @Ignore     - ignora o campo marcado, não fará parte da tabela.
+        @ColumnInfo - especifica o nome da coluna no banco de dados, em vez de usar o
+                      nome do campo como nome da coluna.
+        @Index      - cria índice para acelerar as consultas.
+        @Embedded   - marca um campo como incorporado que transforma todos os subcampos
+                      da classe incorporada como colunas da entidade.
+        @Relation   - especifica relações, úteis para buscar entidades relacionadas
+    
+
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
+    @ColumnInfo(name = "poemId")
+    private int mId;
+
+    @Nullable
+    @ColumnInfo(name = "museumName")
+    private String mName;
+
+    private String mStyle;
+
+    public Museum(@Nullable String name, String style, int score, String creationDate) {
+        mTitle = title;
+        mAuthor = author;
+        mScore = score;
+        mCreationDate = creationDate;
+    }
+
+    public int getId() {
+        return mId;
+    }
+
+    public void setId(int id) {
+        mId = id;
+    }
+
+    public String getTitle() {
+        return mTitle;
+    }
+
+    public void setTitle(String title) {
+        mTitle = title ;
+    }
+
+    public String getAuthor() {
+        return mAuthor;
+    }
+
+    public void setAuthor(String author) {
+        mAuthor = author;
+    }
+
+    public int getScore() {
+        return mScore;
+    }
+
+    public void setScore(int score) {
+        mScore = score;
+    }
+
+    public String getCreationDate() {
+        return mCreationDate;
+    }
+
+    public void setCreationDate(String creationDate) {
+        mCreationDate = creationDate;
+    }
+
+    private int mScore;
+    private String mCreationDate;
+
+}
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+St
